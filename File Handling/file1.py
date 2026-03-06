@@ -43,3 +43,20 @@ print("Total number of vowels : ",c)
 #4) count number of lines
 fo=open("f1.txt")
 ch=fo.read(1)
+c=1
+while ch: #if ch is existing
+    if ch == '\n': #\n -> new line character (Enter key)
+        c+=1
+    ch=fo.read(1)
+print("Total number of lines : ", c+1)
+#5) write in the file f2.txt
+fo=open("f2.txt",'w') #file will be created automatically
+fo.write("Hey ")
+fo.write("Viraj\n")
+fo.write("Rubaba\n")
+fo.close()
+
+#6) append in the file f2.txt
+fo=open("f2.txt",'a') #try with 'w' also
+fo.write("\nHow are you all?")
+fo.close()
