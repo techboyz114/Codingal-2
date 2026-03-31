@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <script>
+        // Type conversion examples
+        var x;
+        x = 0;
+        document.write(x + " " + typeof (x) + "<br>");
+        var y = String(x);
+        document.write(y + " " + typeof (y) + "<br>");
+
+        x = "";
+        document.write(x + " " + typeof (x) + "<br>");
+        y = Number(x);
+        document.write(y + " " + typeof (y) + "<br>");
+        y = Boolean(x);
+        document.write(y + " " + typeof (y) + "<br>");
+
+        x = true;
+        document.write(x + " " + typeof (x) + "<br>");
+        y = Number(x);
+        document.write(y + " " + typeof (y) + "<br>");
+        y = String(x);
+        document.write(y + " " + typeof (y) + "<br>");
+
+        // Error handling with try-catch
+        document.write("Hello<br>");
+        document.write("Jasmehar<br>");
+        try {
+            f();
+        } catch (e) {
+            document.write(e + "<br>");
+        }
+        document.write("Hi Jasmehar<br>");
+
+        // Function examples
+        function f1(a, b, c) {
+            var ans = a + b + c;
+            return ans;
+        }
+        document.write(f1(5, 1, 8) + "<br>");
+
+        var sum = (x, y, z) => x + y + z;
+        document.write(sum(1, 2, 4) + "<br>");
+    </script>
+</body>
+
+</html>
