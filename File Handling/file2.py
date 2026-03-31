@@ -134,3 +134,19 @@ fi.close()
 import os
 os.remove('f1.txt')
 os.rename('f3.txt', 'f1.txt')
+#11) a) count the word 'the' in the file b) the lines with more than 5 words should be written in f5.txt
+fo=open("f1.txt")
+fo2=open("f5.txt", 'a')
+L=fo.readline()
+c=0
+while L:
+    Li=L.strip().split() # L.strip().split() = ['hello', 'the', 'to', 'the', "rock"]
+    for w in Li:
+        if w=='the':
+            c+=1
+    if len(Li)>5:
+        fo2.write(L)
+    L=fo.readline()
+print(c)
+fo.close()
+fo2.close()
